@@ -25,7 +25,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
-import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor'
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -92,7 +92,7 @@ ClassicEditor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
-	fontColor:{
+	fontColor: {
 		colors: [
 			{
 				color: 'hsl(0, 0%, 0%)',
