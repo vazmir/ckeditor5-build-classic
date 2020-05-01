@@ -30,7 +30,6 @@ import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64u
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 
-
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
