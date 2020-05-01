@@ -16,9 +16,9 @@ import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -28,7 +28,8 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -44,10 +45,11 @@ ClassicEditor.builtinPlugins = [
 	Image,
 	ImageCaption,
 	ImageStyle,
-	ImageResize,
 	ImageToolbar,
 	ImageUpload,
+	ImageResize,
 	Indent,
+	IndentBlock,
 	Link,
 	List,
 	Paragraph,
@@ -55,8 +57,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Base64UploadAdapter,
-	FontColor,
-	Alignment
+	FontColor
 ];
 
 // Editor configuration.
@@ -76,7 +77,6 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'indent',
 			'outdent',
-			'alignment',
 			'|',
 			'imageUpload',
 			'blockQuote',
@@ -87,16 +87,15 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
 			'imageStyle:alignLeft',
+			'imageStyle:full',
 			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
 		],
 		styles: [
-			'full',
 			'alignLeft',
+			'full',
 			'alignRight'
 		]
 	},
@@ -106,6 +105,10 @@ ClassicEditor.defaultConfig = {
 			'tableRow',
 			'mergeTableCells'
 		]
+	},
+	indentBlock: {
+		offset: 1,
+		unit: 'em'
 	},
 	fontColor: {
 		colors: [
