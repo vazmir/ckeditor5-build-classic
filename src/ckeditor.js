@@ -56,7 +56,7 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	Base64UploadAdapter,
 	FontColor,
-	Alignment 
+	Alignment
 ];
 
 // Editor configuration.
@@ -89,7 +89,7 @@ ClassicEditor.defaultConfig = {
 		toolbar: [
 			'imageStyle:full',
 			'imageStyle:side',
-			'imageStyle:alignLeft', 
+			'imageStyle:alignLeft',
 			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
