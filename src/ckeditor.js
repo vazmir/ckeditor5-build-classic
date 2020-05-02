@@ -107,9 +107,9 @@ ClassicEditor.defaultConfig = {
 	},
 	indentBlock: {
 		classes: [
-			'custom-block-indent-a', // First step - smallest indentation.
+			'custom-block-indent-a',
 			'custom-block-indent-b',
-			'custom-block-indent-c'  // Last step - biggest indentation.
+			'custom-block-indent-c'
 		]
 	},
 	fontColor: {
